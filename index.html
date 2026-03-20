@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPP Group | Short Rent Solutions</title>
     <style>
-        body { margin: 0; font-family: sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; background: white; }
-        .container { max-width: 500px; padding: 40px 20px; }
+        body { margin: 0; font-family: sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; background: white; padding: 20px 0; }
+        .container { max-width: 500px; padding: 20px; }
         
         /* Logo Principale */
         .main-logo { width: 100%; max-width: 200px; height: auto; margin-bottom: 20px; }
@@ -21,30 +21,26 @@
             margin-bottom: 40px;
         }
 
-        /* Nuova Sezione Loghi Pagamento */
+        /* Sezione Contatti Soci */
+        .contacts-section { margin-bottom: 40px; text-align: left; display: inline-block; }
+        .contact-link { 
+            display: flex; align-items: center; text-decoration: none; color: #1a1a1a; 
+            margin-bottom: 15px; font-weight: bold; font-size: 0.95rem;
+        }
+        .wa-icon { width: 24px; height: 24px; margin-right: 12px; }
+
+        /* Sezione Pagamenti */
         .payment-section {
             border-top: 1px solid #eee;
             padding-top: 20px;
             margin-top: 20px;
         }
         .payment-section span {
-            display: block;
-            font-size: 12px;
-            color: #999;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            display: block; font-size: 11px; color: #999; margin-bottom: 15px; 
+            text-transform: uppercase; letter-spacing: 1px;
         }
-        .payment-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 25px;
-        }
-        .payment-logos img {
-            height: 30px; /* Dimensione contenuta per non rovinare il design */
-            width: auto;
-        }
+        .payment-logos { display: flex; justify-content: center; align-items: center; gap: 20px; }
+        .payment-logos img { height: 25px; width: auto; }
     </style>
 </head>
 <body>
@@ -55,6 +51,21 @@
         <p>Rendiamo ogni viaggio un'esperienza indimenticabile, gestendo soluzioni per ogni esigenza: dal <strong>Top</strong> al <strong>Base</strong>, sempre con standard professionali.</p>
         
         <a href="https://sites.google.com/view/gpprenters/home?authuser=0" class="btn">Entra in GPP Renters</a>
+
+        <div class="contacts-section">
+            <a href="https://wa.me/393384234315" class="contact-link">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon" alt="WA">
+                Galli: +39 338 423 4315
+            </a>
+            <a href="https://wa.me/393487668497" class="contact-link">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon" alt="WA">
+                Pirola: +39 348 766 8497
+            </a>
+            <a href="https://wa.me/393491088800" class="contact-link">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon" alt="WA">
+                Perego: +39 349 108 8800
+            </a>
+        </div>
 
         <div class="payment-section">
             <span>Pagamenti sicuri</span>
