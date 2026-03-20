@@ -3,68 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPP Group | Pagamenti</title>
+    <title>GPP Group | Short Rent Solutions</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f4f4f4;
+        body { margin: 0; font-family: sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; background: white; }
+        .container { max-width: 500px; padding: 40px 20px; }
+        
+        /* Logo Principale */
+        .main-logo { width: 100%; max-width: 200px; height: auto; margin-bottom: 20px; }
+        
+        h1 { font-size: 2rem; margin-bottom: 10px; color: #1a1a1a; }
+        p { color: #666; line-height: 1.5; margin-bottom: 30px; }
+        
+        /* Bottone GPP Renters */
+        .btn { 
+            display: inline-block; background: #bfa37e; color: white; padding: 15px 30px; 
+            text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase; 
+            margin-bottom: 40px;
         }
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 2rem;
-        }
-        .container {
-            background: white;
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 800px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        /* SEZIONE LOGHI */
-        .payment-methods {
-            margin-top: 30px;
-            padding: 20px;
-            border-top: 1px solid #ddd;
-        }
-        .payment-methods img {
-            height: 50px; /* Altezza dei loghi */
-            margin: 10px 20px;
-            vertical-align: middle;
-        }
-        footer {
+
+        /* Nuova Sezione Loghi Pagamento */
+        .payment-section {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
             margin-top: 20px;
-            font-size: 0.8rem;
-            color: #777;
+        }
+        .payment-section span {
+            display: block;
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .payment-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+        .payment-logos img {
+            height: 30px; /* Dimensione contenuta per non rovinare il design */
+            width: auto;
         }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>GPP Group</h1>
-    </header>
-
     <div class="container">
-        <h2>Benvenuti</h2>
-        <p>Sito in aggiornamento.</p>
+        <img src="LOGO.jpg" alt="GPP Group Logo" class="main-logo">
+        
+        <h1>GPP Group</h1>
+        <p>Rendiamo ogni viaggio un'esperienza indimenticabile, gestendo soluzioni per ogni esigenza: dal <strong>Top</strong> al <strong>Base</strong>, sempre con standard professionali.</p>
+        
+        <a href="https://sites.google.com/view/gpprenters/home?authuser=0" class="btn">Entra in GPP Renters</a>
 
-        <div class="payment-methods">
-            <p><strong>Metodi di pagamento accettati:</strong></p>
-            
-            <img src="Immagine%202026-03-20%20085330.jpeg" alt="PayPal">
-            
-            <img src="logo-satispay-rosso.png" alt="Satispay">
+        <div class="payment-section">
+            <span>Pagamenti sicuri</span>
+            <div class="payment-logos">
+                <img src="Immagine%202026-03-20%20085330.jpeg" alt="PayPal">
+                <img src="logo-satispay-rosso.png" alt="Satispay">
+            </div>
         </div>
     </div>
-
-    <footer>
-        &copy; 2024 GPP Group
-    </footer>
-
 </body>
 </html>
