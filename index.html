@@ -6,31 +6,37 @@
     <title>GPP Group | Short Rent Solutions</title>
     <style>
         body { margin: 0; font-family: sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; background: white; padding: 20px 0; }
-        .container { max-width: 500px; padding: 20px; }
+        .container { max-width: 600px; padding: 20px; }
         .main-logo { width: 100%; max-width: 200px; height: auto; margin-bottom: 20px; }
         h1 { font-size: 2rem; margin-bottom: 10px; color: #1a1a1a; }
         p { color: #666; line-height: 1.5; margin-bottom: 30px; }
-        .btn { display: inline-block; background: #bfa37e; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase; margin-bottom: 50px; }
+        .btn { display: inline-block; background: #bfa37e; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase; margin-bottom: 40px; }
         
-        /* Sezione Numeri Verticale */
-        .partners-column {
+        /* Sezione WhatsApp Singola Icona + Numeri Piccoli */
+        .wa-container { margin-bottom: 50px; }
+        .wa-icon-main { width: 20px; height: 20px; margin-bottom: 10px; }
+        .partners-row {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            gap: 15px;
-            margin-bottom: 50px;
+            gap: 20px;
+            flex-wrap: wrap;
         }
         .wa-link { 
-            display: flex; align-items: center; 
-            text-decoration: none; color: #1a1a1a; font-size: 1rem; font-weight: bold;
-            gap: 10px;
+            text-decoration: none; 
+            color: #1a1a1a; 
+            font-size: 0.7rem; /* Ridotto del 30% rispetto a prima */
+            font-weight: bold;
         }
-        .wa-icon { width: 22px; height: 22px; }
 
         .payment-section { border-top: 1px solid #eee; padding-top: 20px; }
         .payment-section span { display: block; font-size: 11px; color: #999; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
         .payment-logos { display: flex; justify-content: center; align-items: center; gap: 25px; }
         .payment-logos img { height: 25px; width: auto; }
+
+        @media (max-width: 480px) {
+            .partners-row { gap: 10px; }
+        }
     </style>
 </head>
 <body>
@@ -40,19 +46,13 @@
         <p>Rendiamo ogni viaggio un'esperienza indimenticabile, gestendo soluzioni per ogni esigenza: dal <strong>Top</strong> al <strong>Base</strong>, sempre con standard professionali.</p>
         <a href="https://sites.google.com/view/gpprenters/home?authuser=0" class="btn">Entra in GPP Renters</a>
 
-        <div class="partners-column">
-            <a href="https://wa.me/393384234315" class="wa-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon" alt="WA">
-                +39 338 423 4315
-            </a>
-            <a href="https://wa.me/393487668497" class="wa-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon" alt="WA">
-                +39 348 766 8497
-            </a>
-            <a href="https://wa.me/393491088800" class="wa-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon" alt="WA">
-                +39 349 108 8800
-            </a>
+        <div class="wa-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon-main" alt="WhatsApp">
+            <div class="partners-row">
+                <a href="https://wa.me/393384234315" class="wa-link">+39 338 423 4315</a>
+                <a href="https://wa.me/393487668497" class="wa-link">+39 348 766 8497</a>
+                <a href="https://wa.me/393491088800" class="wa-link">+39 349 108 8800</a>
+            </div>
         </div>
 
         <div class="payment-section">
