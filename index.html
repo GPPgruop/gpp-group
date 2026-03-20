@@ -6,7 +6,7 @@
     <title>GPP Group | Short Rent Solutions</title>
     <style>
         body { margin: 0; font-family: sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; background: white; padding: 20px 0; }
-        .container { max-width: 500px; padding: 20px; }
+        .container { max-width: 600px; padding: 20px; }
         
         /* Logo Principale */
         .main-logo { width: 100%; max-width: 200px; height: auto; margin-bottom: 20px; }
@@ -18,22 +18,29 @@
         .btn { 
             display: inline-block; background: #bfa37e; color: white; padding: 15px 30px; 
             text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase; 
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
-        /* Sezione Contatti Soci */
-        .contacts-section { margin-bottom: 40px; text-align: left; display: inline-block; }
-        .contact-link { 
-            display: flex; align-items: center; text-decoration: none; color: #1a1a1a; 
-            margin-bottom: 15px; font-weight: bold; font-size: 0.95rem;
+        /* Sezione Soci Orizzontale */
+        .partners-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-bottom: 50px;
+            gap: 10px;
         }
-        .wa-icon { width: 24px; height: 24px; margin-right: 12px; }
+        .partner-col { flex: 1; }
+        .initial { font-size: 1.5rem; font-weight: bold; display: block; margin-bottom: 10px; color: #1a1a1a; }
+        .wa-link { 
+            display: flex; align-items: center; justify-content: center; 
+            text-decoration: none; color: #1a1a1a; font-size: 0.85rem; font-weight: bold;
+        }
+        .wa-icon { width: 16px; height: 16px; margin-right: 5px; }
 
         /* Sezione Pagamenti */
         .payment-section {
             border-top: 1px solid #eee;
             padding-top: 20px;
-            margin-top: 20px;
         }
         .payment-section span {
             display: block; font-size: 11px; color: #999; margin-bottom: 15px; 
@@ -41,6 +48,11 @@
         }
         .payment-logos { display: flex; justify-content: center; align-items: center; gap: 20px; }
         .payment-logos img { height: 25px; width: auto; }
+
+        /* Mobile responsive */
+        @media (max-width: 480px) {
+            .partners-row { flex-direction: column; align-items: center; gap: 30px; }
+        }
     </style>
 </head>
 <body>
@@ -52,25 +64,34 @@
         
         <a href="https://sites.google.com/view/gpprenters/home?authuser=0" class="btn">Entra in GPP Renters</a>
 
-        <div class="contacts-section">
-            <a href="https://wa.me/393384234315" class="contact-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon" alt="WA">
-                Galli: +39 338 423 4315
-            </a>
-            <a href="https://wa.me/393487668497" class="contact-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon" alt="WA">
-                Pirola: +39 348 766 8497
-            </a>
-            <a href="https://wa.me/393491088800" class="contact-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon" alt="WA">
-                Perego: +39 349 108 8800
-            </a>
+        <div class="partners-row">
+            <div class="partner-col">
+                <span class="initial">G</span>
+                <a href="https://wa.me/393384234315" class="wa-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon" alt="WA">
+                    +39 338 423 4315
+                </a>
+            </div>
+            <div class="partner-col">
+                <span class="initial">P</span>
+                <a href="https://wa.me/393487668497" class="wa-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon" alt="WA">
+                    +39 348 766 8497
+                </a>
+            </div>
+            <div class="partner-col">
+                <span class="initial">P</span>
+                <a href="https://wa.me/393491088800" class="wa-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon" alt="WA">
+                    +39 349 108 8800
+                </a>
+            </div>
         </div>
 
         <div class="payment-section">
             <span>Pagamenti sicuri</span>
             <div class="payment-logos">
-                <img src="Immagine%202026-03-20%20085330.jpeg" alt="PayPal">
+                <img src="image_800358.png" alt="PayPal">
                 <img src="logo-satispay-rosso.png" alt="Satispay">
             </div>
         </div>
