@@ -5,58 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPP Group | Short Rent Solutions</title>
     <style>
-        body { margin: 0; font-family: sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; background: white; padding: 20px 0; }
-        .container { max-width: 600px; padding: 20px; }
-        .main-logo { width: 100%; max-width: 200px; height: auto; margin-bottom: 20px; }
-        h1 { font-size: 2rem; margin-bottom: 10px; color: #1a1a1a; }
-        p { color: #666; line-height: 1.5; margin-bottom: 30px; }
-        .btn { display: inline-block; background: #bfa37e; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase; margin-bottom: 40px; }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; background: white; padding: 20px; }
+        .container { max-width: 400px; width: 100%; }
+        .main-logo { width: 180px; height: auto; margin-bottom: 40px; }
         
-        /* Sezione WhatsApp Singola Icona + Numeri Piccoli */
-        .wa-container { margin-bottom: 50px; }
-        .wa-icon-main { width: 20px; height: 20px; margin-bottom: 10px; }
-        .partners-row {
+        .btn-group { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+        
+        .btn { 
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .wa-link { 
+            justify-content: center;
+            width: 280px; 
+            padding: 15px 0; 
             text-decoration: none; 
-            color: #1a1a1a; 
-            font-size: 0.7rem; /* Ridotto del 30% rispetto a prima */
-            font-weight: bold;
+            border-radius: 8px; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            transition: 0.3s;
         }
+        
+        /* Bottone Oro */
+        .btn-gold { background: #bfa37e; color: white; height: 60px; }
+        
+        /* Bottone Verde con doppia riga */
+        .btn-green { background: #25D366; color: white; min-height: 70px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2); }
+        .btn-green .main-txt { font-size: 1.1rem; }
+        .btn-green .sub-txt { font-size: 0.7rem; opacity: 0.9; font-weight: normal; margin-top: 2px; }
+        
+        .btn:hover { transform: translateY(-2px); opacity: 0.95; }
 
-        .payment-section { border-top: 1px solid #eee; padding-top: 20px; }
-        .payment-section span { display: block; font-size: 11px; color: #999; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        /* Footer Pagamenti */
+        .payment-section { margin-top: 60px; border-top: 1px solid #eee; padding-top: 20px; }
         .payment-logos { display: flex; justify-content: center; align-items: center; gap: 25px; }
-        .payment-logos img { height: 25px; width: auto; }
-
-        @media (max-width: 480px) {
-            .partners-row { gap: 10px; }
-        }
+        .payment-logos img { height: 25px; width: auto; opacity: 0.8; }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="LOGO.jpg" alt="GPP Group Logo" class="main-logo">
-        <h1>GPP Group</h1>
-        <p>Rendiamo ogni viaggio un'esperienza indimenticabile, gestendo soluzioni per ogni esigenza: dal <strong>Top</strong> al <strong>Base</strong>, sempre con standard professionali.</p>
-        <a href="https://sites.google.com/view/gpprenters/home?authuser=0" class="btn">Entra in GPP Renters</a>
-
-        <div class="wa-container">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon-main" alt="WhatsApp">
-            <div class="partners-row">
-                <a href="https://wa.me/393384234315" class="wa-link">+39 338 423 4315</a>
-                <a href="https://wa.me/393487668497" class="wa-link">+39 348 766 8497</a>
-                <a href="https://wa.me/393491088800" class="wa-link">+39 349 108 8800</a>
-            </div>
+        
+        <div class="btn-group">
+            <a href="https://sites.google.com/view/gpprenters/home?authuser=0" class="btn btn-gold">
+                ENTRA
+            </a>
+            
+            <a href="prenota.html" class="btn btn-green">
+                <span class="main-txt">PRENOTA</span>
+                <span class="sub-txt">ZERO COMMISSIONI</span>
+            </a>
         </div>
 
         <div class="payment-section">
-            <span>Pagamenti sicuri</span>
             <div class="payment-logos">
                 <img src="Immagine%202026-03-20%20085330.jpeg" alt="PayPal">
                 <img src="logo-satispay-rosso.png" alt="Satispay">
