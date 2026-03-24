@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenotazioni WhatsApp - GPP Group</title>
+    <style>
+        :root { --blue: #003580; --green: #25D366; } /* Verde WhatsApp */
+        body { font-family: sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h1 { color: var(--blue); text-align: center; }
+        .booking-section { border: 1px solid #ddd; border-radius: 8px; margin-bottom: 30px; overflow: hidden; }
+        .apt-header { background: var(--blue); color: white; padding: 15px; }
+        .content { display: flex; flex-wrap: wrap; padding: 15px; gap: 15px; }
+        .cal { flex: 1.5; min-width: 300px; }
+        .frm { flex: 1; min-width: 250px; background: #fafafa; padding: 15px; border-radius: 5px; }
+        .price-info { font-size: 0.85em; background: #e9ecef; padding: 10px; border-radius: 5px; margin-bottom: 10px; }
+        input, select { width: 100%; padding: 8px; margin: 5px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .btn-wa { background: var(--green); color: white; border: none; padding: 12px; width: 100%; border-radius: 5px; font-weight: bold; cursor: pointer; margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Prenotazioni GPP Group</h1>
+    <p style="text-align:center">Controlla le date libere e inviaci un messaggio su WhatsApp per bloccare la stanza.</p>
+
+    <div class="booking-section">
+        <div class="apt-header"><h2>MAX Concesa</h2></div>
+        <div class="content">
+            <div class="cal">
+                <iframe src="https://calendar.google.com/calendar/embed?src=qnmcakr0l34pmsik775imfp9huba5kn8%40import.calendar.google.com&ctz=Europe%2FRome" style="border:0" width="100%" height="250" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <div class="frm">
+                <div class="price-info">
+                    1-2 Pers: <b>65€</b> (+20€ pulizie)<br>
+                    3-4 Pers: <b>80€</b> (+30€ pulizie)
+                </div>
+                <input type="text" id="nome_max" placeholder="Tuo Nome">
+                <input type="text" id="date_max" placeholder="Date (es: 10-12 Giugno)">
+                <select id="pag_max">
+                    <option value="PayPal">Pagherò con PayPal</option>
+                    <option value="Satispay">Pagherò con Satispay</option>
+                </select>
+                
+                <button class="btn-wa" onclick="inviaWA('MAX Concesa', 'nome_max', 'date_max', 'pag_max')">
+                    📱 Prenota su WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+
+<script>
+function inviaWA(appartamento, idNome, idDate, idPag) {
+    const nome = document.getElementById(idNome).value;
+    const date = document.getElementById(idDate).value;
+    const pag = document.getElementById(idPag).value;
+    const numTelefono = "+393487668497"; // <--- INSERISCI QUI IL TUO NUMERO (es: 393401234567)
+
+    if(nome == "" || date == "") {
+        alert("Per favore inserisci nome e date!");
+        return;
+    }
+
+    const messaggio = `Ciao GPP Group! Vorrei prenotare l'appartamento: *${appartamento}*. %0A%0A👤 Nome: ${nome}%0A📅 Date: ${date}%0A💳 Metodo: ${pag}%0A%0AAttendo conferma del totale e link di pagamento!`;
+    
+    window.open(`https://wa.me/${numTelefono}?text=${messaggio}`, '_blank');
+}
+</script>
+
+</body>
+</html>
