@@ -17,7 +17,7 @@
         .frm { flex: 1; min-width: 250px; background: white; padding: 15px; border-radius: 8px; border: 1px solid #ccc; }
         .prices { font-size: 0.85em; margin-bottom: 10px; border-left: 4px solid #ffc107; padding-left: 8px; line-height: 1.4; }
         label { display: block; margin: 8px 0 2px; font-size: 0.8em; font-weight: bold; color: #444; }
-        input[type="text"], select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; margin-bottom: 5px; font-size: 0.9em; }
+        input[type="text"], input[type="date"], select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; margin-bottom: 5px; font-size: 0.9em; }
         .pet-option { display: flex; align-items: center; gap: 8px; background: #f0fdf4; padding: 6px; border-radius: 5px; border: 1px solid #bbf7d0; margin: 8px 0; font-size: 0.85em; }
         .pet-option input { width: auto; cursor: pointer; }
         .btn-wa { background: var(--green); color: white; border: none; padding: 12px; width: 100%; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 5px; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 1em; transition: 0.2s; text-decoration: none; }
@@ -40,10 +40,11 @@
                 <input type="text" id="n1" placeholder="Nome e Cognome">
                 <label>Ospiti:</label>
                 <select id="os1"><option value="1-2 persone">1-2 Persone</option><option value="3-4 persone">3-4 Persone</option></select>
-                <input type="text" id="d1" placeholder="Date (es: 10-15 Luglio)">
+                <label>Check-in:</label><input type="date" id="cin1">
+                <label>Check-out:</label><input type="date" id="cout1">
                 <div class="pet-option"><input type="checkbox" id="pet1"> <span>Animale piccola taglia (+10€/g)</span></div>
                 <select id="p1"><option value="Bonifico Istantaneo">Bonifico Istantaneo</option><option value="Satispay">Satispay</option><option value="PayPal">PayPal</option></select>
-                <button class="btn-wa" onclick="inviaWA('MAX Concesa', 'n1', 'os1', 'd1', 'pet1', 'p1')">📱 Prenota WhatsApp</button>
+                <button class="btn-wa" onclick="inviaWA('MAX Concesa', 'n1', 'os1', 'cin1', 'cout1', 'pet1', 'p1')">📱 Prenota WhatsApp</button>
             </div>
         </div>
     </div>
@@ -57,10 +58,11 @@
                 <input type="text" id="n2" placeholder="Nome e Cognome">
                 <label>Ospiti:</label>
                 <select id="os2"><option value="1-2 persone">1-2 Persone</option><option value="3-4 persone">3-4 Persone</option></select>
-                <input type="text" id="d2" placeholder="Date">
+                <label>Check-in:</label><input type="date" id="cin2">
+                <label>Check-out:</label><input type="date" id="cout2">
                 <div class="pet-option"><input type="checkbox" id="pet2"> <span>Animale piccola taglia (+10€/g)</span></div>
                 <select id="p2"><option value="Bonifico Istantaneo">Bonifico Istantaneo</option><option value="Satispay">Satispay</option><option value="PayPal">PayPal</option></select>
-                <button class="btn-wa" onclick="inviaWA('LEO Capriate', 'n2', 'os2', 'd2', 'pet2', 'p2')">📱 Prenota WhatsApp</button>
+                <button class="btn-wa" onclick="inviaWA('LEO Capriate', 'n2', 'os2', 'cin2', 'cout2', 'pet2', 'p2')">📱 Prenota WhatsApp</button>
             </div>
         </div>
     </div>
@@ -74,10 +76,11 @@
                 <input type="text" id="n3" placeholder="Nome e Cognome">
                 <label>Ospiti:</label>
                 <select id="os3"><option value="1-2 persone">1-2 Persone</option><option value="3-4 persone">3-4 Persone</option></select>
-                <input type="text" id="d3" placeholder="Date">
+                <label>Check-in:</label><input type="date" id="cin3">
+                <label>Check-out:</label><input type="date" id="cout3">
                 <div class="pet-option"><input type="checkbox" id="pet3"> <span>Animale piccola taglia (+10€/g)</span></div>
                 <select id="p3"><option value="Bonifico Istantaneo">Bonifico Istantaneo</option><option value="Satispay">Satispay</option><option value="PayPal">PayPal</option></select>
-                <button class="btn-wa" onclick="inviaWA('MARCO Canonica', 'n3', 'os3', 'd3', 'pet3', 'p3')">📱 Prenota WhatsApp</button>
+                <button class="btn-wa" onclick="inviaWA('MARCO Canonica', 'n3', 'os3', 'cin3', 'cout3', 'pet3', 'p3')">📱 Prenota WhatsApp</button>
             </div>
         </div>
     </div>
@@ -91,10 +94,11 @@
                 <input type="text" id="n4" placeholder="Nome e Cognome">
                 <label>Ospiti:</label>
                 <select id="os4"><option value="1-3 persone">1-3 Persone</option><option value="4-6 persone">4-6 Persone</option></select>
-                <input type="text" id="d4" placeholder="Date">
+                <label>Check-in:</label><input type="date" id="cin4">
+                <label>Check-out:</label><input type="date" id="cout4">
                 <div class="pet-option"><input type="checkbox" id="pet4"> <span>Animale piccola taglia (+10€/g)</span></div>
                 <select id="p4"><option value="Bonifico Istantaneo">Bonifico Istantaneo</option><option value="Satispay">Satispay</option><option value="PayPal">PayPal</option></select>
-                <button class="btn-wa" onclick="inviaWA('CRIS Trezzo', 'n4', 'os4', 'd4', 'pet4', 'p4')">📱 Prenota WhatsApp</button>
+                <button class="btn-wa" onclick="inviaWA('CRIS Trezzo', 'n4', 'os4', 'cin4', 'cout4', 'pet4', 'p4')">📱 Prenota WhatsApp</button>
             </div>
         </div>
     </div>
@@ -108,10 +112,11 @@
                 <input type="text" id="n5" placeholder="Nome e Cognome">
                 <label>Ospiti:</label>
                 <select id="os5"><option value="1-2 persone">1-2 Persone</option><option value="3-5 persone">3-5 Persone</option></select>
-                <input type="text" id="d5" placeholder="Date">
+                <label>Check-in:</label><input type="date" id="cin5">
+                <label>Check-out:</label><input type="date" id="cout5">
                 <div class="pet-option"><input type="checkbox" id="pet5"> <span>Animale piccola taglia (+10€/g)</span></div>
                 <select id="p5"><option value="Bonifico Istantaneo">Bonifico Istantaneo</option><option value="Satispay">Satispay</option><option value="PayPal">PayPal</option></select>
-                <button class="btn-wa" onclick="inviaWA('ASIA Dalmine', 'n5', 'os5', 'd5', 'pet5', 'p5')">📱 Prenota WhatsApp</button>
+                <button class="btn-wa" onclick="inviaWA('ASIA Dalmine', 'n5', 'os5', 'cin5', 'cout5', 'pet5', 'p5')">📱 Prenota WhatsApp</button>
             </div>
         </div>
     </div>
@@ -123,43 +128,3 @@
             <div class="frm">
                 <div class="prices">1-3 Pers: <b>100€</b> | 4-6 Pers: <b>130€</b><br>+20/30€ Pulizie | +10€/g Animale</div>
                 <input type="text" id="n6" placeholder="Nome e Cognome">
-                <label>Ospiti:</label>
-                <select id="os6"><option value="1-3 persone">1-3 Persone</option><option value="4-6 persone">4-6 Persone</option></select>
-                <input type="text" id="d6" placeholder="Date">
-                <div class="pet-option"><input type="checkbox" id="pet6"> <span>Animale piccola taglia (+10€/g)</span></div>
-                <select id="p6"><option value="Bonifico Istantaneo">Bonifico Istantaneo</option><option value="Satispay">Satispay</option><option value="PayPal">PayPal</option></select>
-                <button class="btn-wa" onclick="inviaWA('SIX Crespi', 'n6', 'os6', 'd6', 'pet6', 'p6')">📱 Prenota WhatsApp</button>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<script>
-function inviaWA(casa, idNome, idOspiti, idDate, idPet, idPag) {
-    const nome = document.getElementById(idNome).value;
-    const ospiti = document.getElementById(idOspiti).value;
-    const date = document.getElementById(idDate).value;
-    const pet = document.getElementById(idPet).checked;
-    const pag = document.getElementById(idPag).value;
-    const tel = "393487668497"; // <--- INSERISCI QUI IL TUO CELLULARE
-
-    if(!nome || !date) { alert("Compila Nome e Date!"); return; }
-
-    let pNotte = "";
-    if (casa === 'MAX Concesa') pNotte = (ospiti.includes('1-2')) ? "65€" : "80€";
-    else if (casa === 'LEO Capriate' || casa === 'MARCO Canonica') pNotte = (ospiti.includes('1-2')) ? "70€" : "85€";
-    else if (casa === 'CRIS Trezzo') pNotte = (ospiti.includes('1-3')) ? "80€" : "100€";
-    else if (casa === 'ASIA Dalmine') pNotte = (ospiti.includes('1-2')) ? "80€" : "95€";
-    else if (casa === 'SIX Crespi') pNotte = (ospiti.includes('1-3')) ? "100€" : "130€";
-
-    const petText = pet ? "🐾 Animale: SI (+10€/g)" : "🐾 Animale: NO";
-    const extra = (pag === "Bonifico Istantaneo") ? "Mandami l'IBAN." : "Mandami il link di pagamento.";
-    const msg = `Ciao GPP Group! %0A Vorrei prenotare: *${casa}*%0A👤 Nome: ${nome}%0A👥 Ospiti: ${ospiti}%0A📅 Date: ${date}%0A💰 Tariffa: *${pNotte} a notte*%0A${petText}%0A💳 Pagamento: *${pag}*%0A%0A${extra}`;
-    
-    window.open(`https://wa.me/${tel}?text=${msg}`, '_blank');
-}
-</script>
-
-</body>
-</html>
