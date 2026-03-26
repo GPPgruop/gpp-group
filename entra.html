@@ -3,95 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPP Group | Short Rent Solutions</title>
+    <title>Le Nostre Case | GPP Group</title>
     <style>
-        body { margin: 0; font-family: 'Segoe UI', sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; background: white; padding: 20px; box-sizing: border-box; }
-        .container { max-width: 500px; width: 100%; }
-        .main-logo { width: 180px; height: auto; margin-bottom: 30px; }
-        
-        .btn-group { display: flex; flex-direction: column; align-items: center; gap: 20px; margin-bottom: 40px; }
-        
-        .btn { 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 280px; 
-            padding: 15px 0; 
-            text-decoration: none; 
-            border-radius: 8px; 
-            font-weight: bold; 
-            text-transform: uppercase; 
-            transition: 0.3s;
-        }
-        
-        .btn-gold { background: #bfa37e; color: white; height: 60px; }
-        .btn-green { background: #25D366; color: white; min-height: 70px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2); }
-        .btn-green .main-txt { font-size: 1.1rem; }
-        .btn-green .sub-txt { font-size: 0.7rem; opacity: 0.9; font-weight: normal; margin-top: 2px; }
-        .btn:hover { transform: translateY(-2px); opacity: 0.95; }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #ffffff; display: flex; min-height: 100vh; flex-direction: column; }
+        .wrapper { display: flex; flex-grow: 1; }
 
-        /* Sezione WhatsApp con i 3 numeri */
-        .wa-container { margin-bottom: 40px; }
-        .wa-icon-main { width: 20px; height: 20px; margin-bottom: 10px; }
-        .partners-row { display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; }
-        .wa-link { text-decoration: none; color: #1a1a1a; font-size: 0.75rem; font-weight: bold; }
+        /* Sidebar a Sinistra */
+        .sidebar { 
+            width: 200px; background: #fff; border-right: 1px solid #eee; padding: 20px; 
+            display: flex; flex-direction: column; position: fixed; height: 100vh; text-align: left; z-index: 100;
+        }
+        .sidebar-logo { width: 100px; height: auto; margin-bottom: 30px; }
+        .sidebar-title { color: #bfa37e; font-weight: bold; font-size: 0.9rem; margin-bottom: 20px; text-transform: uppercase; }
+        .sidebar-menu { list-style: none; padding: 0; margin: 0; flex-grow: 1; }
+        .sidebar-menu li { margin-bottom: 15px; }
+        .sidebar-menu a { text-decoration: none; color: #333; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
+        .sidebar-menu a:hover { color: #bfa37e; }
+
+        /* Area Principale */
+        .main-content { margin-left: 240px; flex-grow: 1; padding: 40px; text-align: center; }
+        .hero-title { font-size: 1.8rem; color: #bfa37e; text-transform: uppercase; letter-spacing: 1.5px; font-weight: bold; margin-bottom: 50px; }
+
+        /* Griglia */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; padding-bottom: 50px; }
+
+        /* Card */
+        .card { background: white; border-radius: 10px; overflow: hidden; padding-bottom: 25px; text-align: center; }
+        .card-link { text-decoration: none; color: inherit; display: block; margin-bottom: 15px; }
+        .card-img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 15px; }
+        .card-title { font-size: 0.95rem; font-weight: bold; color: #333; text-transform: uppercase; margin-bottom: 20px; display: block; }
+
+        /* Contenitore Bottoni */
+        .card-buttons { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+
+        /* BOTTONE BLU Booking.com */
+        .btn-booking { 
+            display: flex; align-items: center; justify-content: center;
+            background: #003580; color: white; text-decoration: none; 
+            height: 50px; width: 260px; border-radius: 8px; font-weight: bold; font-size: 0.85rem; transition: 0.3s;
+        }
+        .btn-booking:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        /* BOTTONE VERDE Prenotami senza commissioni */
+        .btn-direct {
+            display: flex; align-items: center; justify-content: center;
+            background: #25D366; color: white; text-decoration: none; 
+            height: 50px; width: 260px; border-radius: 8px;
+            font-weight: bold; font-size: 0.85rem; transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
+        }
+        .btn-direct:hover { opacity: 0.9; transform: translateY(-2px); }
 
         /* Footer Pagamenti */
-        .payment-section { border-top: 1px solid #eee; padding-top: 20px; text-align: center; }
-        .payment-logos { 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            gap: 35px; 
-            margin-bottom: 15px; 
-        }
-        .payment-logos img { 
-            height: 25px; 
-            width: auto; 
-            transform: scale(1.3); 
-        }
-        .secure-txt { 
-            display: block; 
-            text-align: center; 
-            font-size: 11px; 
-            color: #999; 
-            text-transform: uppercase; 
-            letter-spacing: 1px; 
-        }
+        .payment-footer { margin-left: 240px; border-top: 1px solid #eee; padding: 30px 20px; text-align: center; background: #fff; }
+        .payment-logos { display: flex; justify-content: center; align-items: center; gap: 35px; margin-bottom: 15px; }
+        .payment-logos img { height: 25px; width: auto; transform: scale(1.3); }
+        .secure-txt { display: block; font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px; }
 
-        @media (max-width: 480px) { .partners-row { gap: 10px; } }
+        @media (max-width: 768px) {
+            .sidebar { display: none; }
+            .main-content, .payment-footer { margin-left: 0; padding: 20px; }
+            .btn-booking, .btn-direct { width: 90%; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="LOGO.jpg" alt="GPP Group Logo" class="main-logo">
-        
-        <div class="btn-group">
-            <a href="entra.html" class="btn btn-gold">ENTRA</a>
-            
-            <a href="prenota.html" class="btn btn-green">
-                <span class="main-txt">PRENOTA</span>
-                <span class="sub-txt">ZERO COMMISSIONI</span>
-            </a>
-        </div>
 
-        <div class="wa-container">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="wa-icon-main" alt="WhatsApp">
-            <div class="partners-row">
-                <a href="https://wa.me/393384234315" class="wa-link">+39 338 423 4315</a>
-                <a href="https://wa.me/393487668497" class="wa-link">+39 348 766 8497</a>
-                <a href="https://wa.me/393491088800" class="wa-link">+39 349 108 8800</a>
-            </div>
-        </div>
+    <div class="wrapper">
+        <nav class="sidebar">
+            <img src="LOGO.jpg" alt="GPP Group" class="sidebar-logo">
+            <div class="sidebar-title">GPP Group</div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://maps.app.goo.gl/XNzDu22yvkQAFR6A9">Casa di Leo</a></li>
+                <li><a href="https://maps.app.goo.gl/K8MPb81zR1CgEQMK6">Casa di Cris</a></li>
+                <li><a href="https://maps.app.goo.gl/FGzDAWFCHP7jtqBa8">Casa di Asia</a></li>
+                <li><a href="https://maps.app.goo.gl/85ami4V61BBNzgib6">Casa di Marco</a></li>
+                <li><a href="https://maps.app.goo.gl/JJFDqGtm5qztsRYi6">Crespi Apartment</a></li>
+                <li><a href="https://maps.app.goo.gl/zhZodeyjQCivYyr38">Casa di Max</a></li>
+            </ul>
+        </nav>
 
-        <div class="payment-section">
-            <div class="payment-logos">
-                <img src="Immagine%202026-03-20%20085330.jpeg" alt="PayPal">
-                <img src="logo-satispay-rosso.png" alt="Satispay">
+        <main class="main-content">
+            <h1 class="hero-title">Scegli il tuo appartamento</h1>
+            <div class="grid">
+                
+                <div class="card">
+                    <a href="https://maps.app.goo.gl/XNzDu22yvkQAFR6A9" class="card-link">
+                        <img src="leo.jpg" alt="Casa di Leo" class="card-img">
+                        <span class="card-title">CASA DI LEO (CAPRIATE)</span>
+                    </a>
+                    <div class="card-buttons">
+                        <a href="https://www.booking.com/Share-pF6ilg" class="btn-booking">Prenotami su Booking.com</a>
+                        <a href="prenota.html" class="btn-direct">Prenotami senza commissioni</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="https://maps.app.goo.gl/K8MPb81zR1CgEQMK6" class="card-link">
+                        <img src="cris.jpg" alt="Casa di Cris" class="card-img">
+                        <span class="card-title">CASA DI CRIS (TREZZO)</span>
+                    </a>
+                    <div class="card-buttons">
+                        <a href="https://www.booking.com/Share-vH5bDs" class="btn-booking">Prenotami su Booking.com</a>
+                        <a href="prenota.html" class="btn-direct">Prenotami senza commissioni</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="https://maps.app.goo.gl/FGzDAWFCHP7jtqBa8" class="card-link">
+                        <img src="asia.jpg" alt="Casa di Asia" class="card-img">
+                        <span class="card-title">CASA DI ASIA (DALMINE)</span>
+                    </a>
+                    <div class="card-buttons">
+                        <a href="https://www.booking.com/Share-8znbDhD" class="btn-booking">Prenotami su Booking.com</a>
+                        <a href="prenota.html" class="btn-direct">Prenotami senza commissioni</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="https://maps.app.goo.gl/85ami4V61BBNzgib6" class="card-link">
+                        <img src="marco.jpg" alt="Casa di Marco" class="card-img">
+                        <span class="card-title">CASA DI MARCO (CANONICA)</span>
+                    </a>
+                    <div class="card-buttons">
+                        <a href="https://www.booking.com/Share-V2Z4U7n" class="btn-booking">Prenotami su Booking.com</a>
+                        <a href="prenota.html" class="btn-direct">Prenotami senza commissioni</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="https://maps.app.goo.gl/JJFDqGtm5qztsRYi6" class="card-link">
+                        <img src="six.jpg" alt="Crespi Apartment" class="card-img">
+                        <span class="card-title">CRESPI APARTMENT (CRESPI)</span>
+                    </a>
+                    <div class="card-buttons">
+                        <a href="https://www.booking.com/Share-va3mXF" class="btn-booking">Prenotami su Booking.com</a>
+                        <a href="prenota.html" class="btn-direct">Prenotami senza commissioni</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <a href="https://maps.app.goo.gl/zhZodeyjQCivYyr38" class="card-link">
+                        <img src="max.jpg" alt="Casa di Max" class="card-img">
+                        <span class="card-title">CASA DI MAX (TREZZO)</span>
+                    </a>
+                    <div class="card-buttons">
+                        <a href="https://www.booking.com/Share-0SDDRp" class="btn-booking">Prenotami su Booking.com</a>
+                        <a href="prenota.html" class="btn-direct">Prenotami senza commissioni</a>
+                    </div>
+                </div>
+
             </div>
-            <span class="secure-txt">Pagamenti sicuri</span>
-        </div>
+        </main>
     </div>
+
+    <footer class="payment-footer">
+        <div class="payment-logos">
+            <img src="Immagine%202026-03-20%20085330.jpeg" alt="PayPal">
+            <img src="logo-satispay-rosso.png" alt="Satispay">
+        </div>
+        <span class="secure-txt">Pagamenti sicuri</span>
+    </footer>
+
 </body>
 </html>
