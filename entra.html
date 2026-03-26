@@ -24,7 +24,7 @@
         .main-content { margin-left: 240px; flex-grow: 1; padding: 40px; text-align: center; }
         .hero-title { font-size: 1.8rem; color: #bfa37e; text-transform: uppercase; letter-spacing: 1.5px; font-weight: bold; margin-bottom: 50px; }
 
-        /* Griglia - Si adatta automaticamente */
+        /* Griglia */
         .grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -37,7 +37,8 @@
         /* Card */
         .card { background: white; border-radius: 10px; overflow: hidden; padding-bottom: 25px; text-align: center; }
         .card-link { text-decoration: none; color: inherit; display: block; margin-bottom: 15px; }
-        .card-img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 15px; }
+        .card-img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 15px; transition: 0.3s; }
+        .card-img:hover { transform: scale(1.02); }
         .card-title { font-size: 0.95rem; font-weight: bold; color: #333; text-transform: uppercase; margin-bottom: 20px; display: block; padding: 0 10px; }
 
         /* Contenitore Bottoni */
@@ -59,49 +60,16 @@
         .payment-logos img { height: 25px; width: auto; }
         .secure-txt { display: block; font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* --- OTTIMIZZAZIONE PER CELLULARE --- */
+        /* Mobile */
         @media (max-width: 768px) {
-            .sidebar { display: none; } /* Nasconde la sidebar che ruba spazio */
-            
-            .main-content { 
-                margin-left: 0; /* Rimuove il margine della sidebar */
-                padding: 20px 15px; 
-            }
-            
-            .hero-title { 
-                font-size: 1.4rem; 
-                margin-bottom: 30px; 
-                margin-top: 20px;
-            }
-
-            .grid { 
-                grid-template-columns: 1fr; /* Forza una sola colonna */
-                gap: 30px; 
-            }
-
-            .card {
-                max-width: 100%;
-                border-bottom: 1px solid #eee; /* Separa visivamente le case */
-                padding-bottom: 40px;
-            }
-
-            .card-img {
-                height: 200px; /* Riduce leggermente l'altezza foto su mobile */
-            }
-
-            .btn-booking, .btn-direct { 
-                width: 100%; /* I bottoni occupano tutta la larghezza disponibile */
-                max-width: 280px; 
-            }
-
-            .payment-footer { 
-                margin-left: 0; 
-                padding: 40px 20px;
-            }
-            
-            .payment-logos {
-                gap: 20px;
-            }
+            .sidebar { display: none; }
+            .main-content { margin-left: 0; padding: 20px 15px; }
+            .hero-title { font-size: 1.4rem; margin-bottom: 30px; margin-top: 20px; }
+            .grid { grid-template-columns: 1fr; gap: 30px; }
+            .card { border-bottom: 1px solid #eee; padding-bottom: 40px; }
+            .card-img { height: 200px; }
+            .btn-booking, .btn-direct { width: 100%; max-width: 280px; }
+            .payment-footer { margin-left: 0; padding: 40px 20px; }
         }
     </style>
 </head>
@@ -113,12 +81,12 @@
             <div class="sidebar-title">GPP Group</div>
             <ul class="sidebar-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Casa di Leo</a></li>
-                <li><a href="#">Casa di Cris</a></li>
-                <li><a href="#">Casa di Asia</a></li>
-                <li><a href="#">Casa di Marco</a></li>
-                <li><a href="#">Crespi Apartment</a></li>
-                <li><a href="#">Casa di Max</a></li>
+                <li><a href="https://maps.app.goo.gl/GM4QXs6cfvhUcRNZ7">Casa di Leo</a></li>
+                <li><a href="https://maps.app.goo.gl/MZ64okHExwk8KLWT8">Casa di Cris</a></li>
+                <li><a href="https://maps.app.goo.gl/njAnUm63ETJEMs957">Casa di Asia</a></li>
+                <li><a href="https://maps.app.goo.gl/RQmkeW3sCPa2vgZM7">Casa di Marco</a></li>
+                <li><a href="https://maps.app.goo.gl/s6JEJci3H3roxVxN6">Crespi Apartment</a></li>
+                <li><a href="https://maps.app.goo.gl/Nx351RW9GjZpAvrT6">Casa di Max</a></li>
             </ul>
         </nav>
 
@@ -127,7 +95,7 @@
             
             <div class="grid">
                 <div class="card">
-                    <a href="#" class="card-link">
+                    <a href="https://maps.app.goo.gl/GM4QXs6cfvhUcRNZ7" class="card-link">
                         <img src="leo.jpg" alt="Casa di Leo" class="card-img">
                         <span class="card-title">CASA DI LEO (CAPRIATE)</span>
                     </a>
@@ -138,7 +106,7 @@
                 </div>
 
                 <div class="card">
-                    <a href="#" class="card-link">
+                    <a href="https://maps.app.goo.gl/MZ64okHExwk8KLWT8" class="card-link">
                         <img src="cris.jpg" alt="Casa di Cris" class="card-img">
                         <span class="card-title">CASA DI CRIS (TREZZO)</span>
                     </a>
@@ -149,7 +117,7 @@
                 </div>
 
                 <div class="card">
-                    <a href="#" class="card-link">
+                    <a href="https://maps.app.goo.gl/njAnUm63ETJEMs957" class="card-link">
                         <img src="asia.jpg" alt="Casa di Asia" class="card-img">
                         <span class="card-title">CASA DI ASIA (DALMINE)</span>
                     </a>
@@ -160,7 +128,7 @@
                 </div>
 
                 <div class="card">
-                    <a href="#" class="card-link">
+                    <a href="https://maps.app.goo.gl/RQmkeW3sCPa2vgZM7" class="card-link">
                         <img src="marco.jpg" alt="Casa di Marco" class="card-img">
                         <span class="card-title">CASA DI MARCO (CANONICA)</span>
                     </a>
@@ -171,7 +139,7 @@
                 </div>
 
                 <div class="card">
-                    <a href="#" class="card-link">
+                    <a href="https://maps.app.goo.gl/s6JEJci3H3roxVxN6" class="card-link">
                         <img src="six.jpg" alt="Crespi Apartment" class="card-img">
                         <span class="card-title">CRESPI APARTMENT (CRESPI)</span>
                     </a>
@@ -182,7 +150,7 @@
                 </div>
 
                 <div class="card">
-                    <a href="#" class="card-link">
+                    <a href="https://maps.app.goo.gl/Nx351RW9GjZpAvrT6" class="card-link">
                         <img src="max.jpg" alt="Casa di Max" class="card-img">
                         <span class="card-title">CASA DI MAX (TREZZO)</span>
                     </a>
