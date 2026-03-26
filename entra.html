@@ -8,7 +8,7 @@
         body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #ffffff; display: flex; min-height: 100vh; flex-direction: column; }
         .wrapper { display: flex; flex-grow: 1; }
 
-        /* Sidebar a Sinistra */
+        /* Sidebar a Sinistra (PC) */
         .sidebar { 
             width: 200px; background: #fff; border-right: 1px solid #eee; padding: 20px; 
             display: flex; flex-direction: column; position: fixed; height: 100vh; text-align: left; z-index: 100;
@@ -24,46 +24,84 @@
         .main-content { margin-left: 240px; flex-grow: 1; padding: 40px; text-align: center; }
         .hero-title { font-size: 1.8rem; color: #bfa37e; text-transform: uppercase; letter-spacing: 1.5px; font-weight: bold; margin-bottom: 50px; }
 
-        /* Griglia */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; padding-bottom: 50px; }
+        /* Griglia - Si adatta automaticamente */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 40px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding-bottom: 50px; 
+        }
 
         /* Card */
         .card { background: white; border-radius: 10px; overflow: hidden; padding-bottom: 25px; text-align: center; }
         .card-link { text-decoration: none; color: inherit; display: block; margin-bottom: 15px; }
         .card-img { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 15px; }
-        .card-title { font-size: 0.95rem; font-weight: bold; color: #333; text-transform: uppercase; margin-bottom: 20px; display: block; }
+        .card-title { font-size: 0.95rem; font-weight: bold; color: #333; text-transform: uppercase; margin-bottom: 20px; display: block; padding: 0 10px; }
 
         /* Contenitore Bottoni */
         .card-buttons { display: flex; flex-direction: column; gap: 10px; align-items: center; }
 
-        /* BOTTONE BLU Booking.com */
-        .btn-booking { 
+        /* Bottoni */
+        .btn-booking, .btn-direct { 
             display: flex; align-items: center; justify-content: center;
-            background: #003580; color: white; text-decoration: none; 
+            color: white; text-decoration: none; 
             height: 50px; width: 260px; border-radius: 8px; font-weight: bold; font-size: 0.85rem; transition: 0.3s;
         }
-        .btn-booking:hover { opacity: 0.9; transform: translateY(-2px); }
-
-        /* BOTTONE VERDE Prenotami senza commissioni */
-        .btn-direct {
-            display: flex; align-items: center; justify-content: center;
-            background: #25D366; color: white; text-decoration: none; 
-            height: 50px; width: 260px; border-radius: 8px;
-            font-weight: bold; font-size: 0.85rem; transition: 0.3s;
-            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
-        }
-        .btn-direct:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn-booking { background: #003580; }
+        .btn-direct { background: #25D366; box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2); }
+        .btn-booking:hover, .btn-direct:hover { opacity: 0.9; transform: translateY(-2px); }
 
         /* Footer Pagamenti */
         .payment-footer { margin-left: 240px; border-top: 1px solid #eee; padding: 30px 20px; text-align: center; background: #fff; }
         .payment-logos { display: flex; justify-content: center; align-items: center; gap: 35px; margin-bottom: 15px; }
-        .payment-logos img { height: 25px; width: auto; transform: scale(1.3); }
+        .payment-logos img { height: 25px; width: auto; }
         .secure-txt { display: block; font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 1px; }
 
+        /* --- OTTIMIZZAZIONE PER CELLULARE --- */
         @media (max-width: 768px) {
-            .sidebar { display: none; }
-            .main-content, .payment-footer { margin-left: 0; padding: 20px; }
-            .btn-booking, .btn-direct { width: 90%; }
+            .sidebar { display: none; } /* Nasconde la sidebar che ruba spazio */
+            
+            .main-content { 
+                margin-left: 0; /* Rimuove il margine della sidebar */
+                padding: 20px 15px; 
+            }
+            
+            .hero-title { 
+                font-size: 1.4rem; 
+                margin-bottom: 30px; 
+                margin-top: 20px;
+            }
+
+            .grid { 
+                grid-template-columns: 1fr; /* Forza una sola colonna */
+                gap: 30px; 
+            }
+
+            .card {
+                max-width: 100%;
+                border-bottom: 1px solid #eee; /* Separa visivamente le case */
+                padding-bottom: 40px;
+            }
+
+            .card-img {
+                height: 200px; /* Riduce leggermente l'altezza foto su mobile */
+            }
+
+            .btn-booking, .btn-direct { 
+                width: 100%; /* I bottoni occupano tutta la larghezza disponibile */
+                max-width: 280px; 
+            }
+
+            .payment-footer { 
+                margin-left: 0; 
+                padding: 40px 20px;
+            }
+            
+            .payment-logos {
+                gap: 20px;
+            }
         }
     </style>
 </head>
@@ -75,21 +113,21 @@
             <div class="sidebar-title">GPP Group</div>
             <ul class="sidebar-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="https://maps.app.goo.gl/XNzDu22yvkQAFR6A9">Casa di Leo</a></li>
-                <li><a href="https://maps.app.goo.gl/K8MPb81zR1CgEQMK6">Casa di Cris</a></li>
-                <li><a href="https://maps.app.goo.gl/FGzDAWFCHP7jtqBa8">Casa di Asia</a></li>
-                <li><a href="https://maps.app.goo.gl/85ami4V61BBNzgib6">Casa di Marco</a></li>
-                <li><a href="https://maps.app.goo.gl/JJFDqGtm5qztsRYi6">Crespi Apartment</a></li>
-                <li><a href="https://maps.app.goo.gl/zhZodeyjQCivYyr38">Casa di Max</a></li>
+                <li><a href="#">Casa di Leo</a></li>
+                <li><a href="#">Casa di Cris</a></li>
+                <li><a href="#">Casa di Asia</a></li>
+                <li><a href="#">Casa di Marco</a></li>
+                <li><a href="#">Crespi Apartment</a></li>
+                <li><a href="#">Casa di Max</a></li>
             </ul>
         </nav>
 
         <main class="main-content">
             <h1 class="hero-title">Scegli il tuo appartamento</h1>
+            
             <div class="grid">
-                
                 <div class="card">
-                    <a href="https://maps.app.goo.gl/XNzDu22yvkQAFR6A9" class="card-link">
+                    <a href="#" class="card-link">
                         <img src="leo.jpg" alt="Casa di Leo" class="card-img">
                         <span class="card-title">CASA DI LEO (CAPRIATE)</span>
                     </a>
@@ -100,7 +138,7 @@
                 </div>
 
                 <div class="card">
-                    <a href="https://maps.app.goo.gl/K8MPb81zR1CgEQMK6" class="card-link">
+                    <a href="#" class="card-link">
                         <img src="cris.jpg" alt="Casa di Cris" class="card-img">
                         <span class="card-title">CASA DI CRIS (TREZZO)</span>
                     </a>
@@ -111,7 +149,7 @@
                 </div>
 
                 <div class="card">
-                    <a href="https://maps.app.goo.gl/FGzDAWFCHP7jtqBa8" class="card-link">
+                    <a href="#" class="card-link">
                         <img src="asia.jpg" alt="Casa di Asia" class="card-img">
                         <span class="card-title">CASA DI ASIA (DALMINE)</span>
                     </a>
@@ -122,7 +160,7 @@
                 </div>
 
                 <div class="card">
-                    <a href="https://maps.app.goo.gl/85ami4V61BBNzgib6" class="card-link">
+                    <a href="#" class="card-link">
                         <img src="marco.jpg" alt="Casa di Marco" class="card-img">
                         <span class="card-title">CASA DI MARCO (CANONICA)</span>
                     </a>
@@ -133,7 +171,7 @@
                 </div>
 
                 <div class="card">
-                    <a href="https://maps.app.goo.gl/JJFDqGtm5qztsRYi6" class="card-link">
+                    <a href="#" class="card-link">
                         <img src="six.jpg" alt="Crespi Apartment" class="card-img">
                         <span class="card-title">CRESPI APARTMENT (CRESPI)</span>
                     </a>
@@ -144,7 +182,7 @@
                 </div>
 
                 <div class="card">
-                    <a href="https://maps.app.goo.gl/zhZodeyjQCivYyr38" class="card-link">
+                    <a href="#" class="card-link">
                         <img src="max.jpg" alt="Casa di Max" class="card-img">
                         <span class="card-title">CASA DI MAX (TREZZO)</span>
                     </a>
@@ -153,7 +191,6 @@
                         <a href="prenota.html" class="btn-direct">Prenotami senza commissioni</a>
                     </div>
                 </div>
-
             </div>
         </main>
     </div>
@@ -163,7 +200,7 @@
             <img src="Immagine%202026-03-20%20085330.jpeg" alt="PayPal">
             <img src="logo-satispay-rosso.png" alt="Satispay">
         </div>
-        <span class="secure-txt">Pagamenti sicuri</span>
+        <span class="secure-txt">🛡️ Pagamenti sicuri garantiti</span>
     </footer>
 
 </body>
