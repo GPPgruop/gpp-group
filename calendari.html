@@ -4,93 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disponibilità Case | GPP Group</title>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/ical.js@1.5.0/build/ical.min.js"></script>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; background: #ffffff; margin: 0; padding: 20px; color: #333; }
-        .header { text-align: center; margin-bottom: 40px; }
-        .btn-back { display: inline-block; text-decoration: none; color: #bfa37e; font-weight: bold; margin-bottom: 20px; text-transform: uppercase; border: 2px solid #bfa37e; padding: 10px 20px; border-radius: 50px; transition: 0.3s; }
-        .btn-back:hover { background: #bfa37e; color: white; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #ffffff; margin: 0; padding: 20px; color: #333; text-align: center; }
+        .header { margin-bottom: 40px; }
+        .btn-back { display: inline-block; text-decoration: none; color: #bfa37e; font-weight: bold; margin-bottom: 20px; border: 2px solid #bfa37e; padding: 10px 20px; border-radius: 50px; }
         
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; max-width: 1400px; margin: 0 auto; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1400px; margin: 0 auto; }
         
-        .casa-card { background: white; border-radius: 18px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 6px solid #98d9ea; display: flex; flex-direction: column; }
-        .casa-card h2 { margin-top: 0; color: #1a1a1a; font-size: 1.5rem; font-weight: 800; text-transform: uppercase; border-bottom: 1px solid #eee; padding-bottom: 10px; text-align: center; }
+        .casa-card { background: white; border-radius: 18px; padding: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 6px solid #98d9ea; }
+        .casa-card h2 { font-size: 1.3rem; font-weight: 800; text-transform: uppercase; margin-bottom: 15px; }
         
-        .calendar-box { width: 100%; min-height: 450px; margin-top: 15px; }
-
-        /* Personalizzazione colori calendario */
-        .fc-event { border: none !important; cursor: default; }
-        .fc-daygrid-day-number { font-weight: bold; color: #333; text-decoration: none; }
-        .occupied-event { background-color: #ff4d4d !important; opacity: 0.6; } /* Rosso per occupato */
+        /* Contenitore per il calendario esterno */
+        .calendar-wrapper { width: 100%; height: 500px; overflow: hidden; border-radius: 10px; border: 1px solid #eee; }
+        iframe { width: 100%; height: 100%; border: none; }
         
-        @media (max-width: 480px) { .grid-container { grid-template-columns: 1fr; } }
+        .disclaimer { font-size: 12px; color: #888; margin-top: 10px; }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <a href="index.html" class="btn-back">← Torna alla Home</a>
-        <h1 style="font-weight: 800; letter-spacing: 1px;">DISPONIBILITÀ IN TEMPO REALE</h1>
-        <p style="color: #666;">Le date in rosso indicano che la casa è già occupata.</p>
+        <a href="index.html" class="btn-back">← TORNA ALLA HOME</a>
+        <h1 style="font-weight: 800;">DISPONIBILITÀ AGGIORNATE</h1>
+        <p>Le date occupate sono sincronizzate con Booking.com</p>
     </div>
 
     <div class="grid-container">
-        <div class="casa-card"><h2>BIRI Trezzo</h2><div id="cal-biri" class="calendar-box"></div></div>
-        <div class="casa-card"><h2>CRIS Trezzo</h2><div id="cal-cris" class="calendar-box"></div></div>
-        <div class="casa-card"><h2>MAX Concesa</h2><div id="cal-max" class="calendar-box"></div></div>
-        <div class="casa-card"><h2>MARCO Canonica</h2><div id="cal-marco" class="calendar-box"></div></div>
-        <div class="casa-card"><h2>LEO Capriate</h2><div id="cal-leo" class="calendar-box"></div></div>
-        <div class="casa-card"><h2>ASIA Dalmine</h2><div id="cal-asia" class="calendar-box"></div></div>
-        <div class="casa-card"><h2>SIX Crespi</h2><div id="cal-six" class="calendar-box"></div></div>
+        
+        <div class="casa-card">
+            <h2>BIRI Trezzo</h2>
+            <div class="calendar-wrapper">
+                <iframe src="https://view.jcalendar.org/?ical=https://ical.booking.com/v1/export?t=bac8b70b-7df6-4040-87b6-b57add00a01c"></iframe>
+            </div>
+        </div>
+
+        <div class="casa-card">
+            <h2>CRIS Trezzo</h2>
+            <div class="calendar-wrapper">
+                <iframe src="https://view.jcalendar.org/?ical=https://ical.booking.com/v1/export?t=06f622a0-cd54-4209-892c-7fe2d4fbce71"></iframe>
+            </div>
+        </div>
+
+        <div class="casa-card">
+            <h2>MAX Concesa</h2>
+            <div class="calendar-wrapper">
+                <iframe src="https://view.jcalendar.org/?ical=https://ical.booking.com/v1/export?t=8c99a452-9708-43f2-b121-1955acd69dcf"></iframe>
+            </div>
+        </div>
+
+        <div class="casa-card">
+            <h2>MARCO Canonica</h2>
+            <div class="calendar-wrapper">
+                <iframe src="https://view.jcalendar.org/?ical=https://ical.booking.com/v1/export?t=c4dfaeec-ff71-4318-9ec6-de01b027b104"></iframe>
+            </div>
+        </div>
+
+        <div class="casa-card">
+            <h2>LEO Capriate</h2>
+            <div class="calendar-wrapper">
+                <iframe src="https://view.jcalendar.org/?ical=https://ical.booking.com/v1/export?t=c7f826be-1635-47b0-abd5-af98d425d32f"></iframe>
+            </div>
+        </div>
+
+        <div class="casa-card">
+            <h2>ASIA Dalmine</h2>
+            <div class="calendar-wrapper">
+                <iframe src="https://view.jcalendar.org/?ical=https://ical.booking.com/v1/export?t=fca09da7-61a5-4261-a156-024350220592"></iframe>
+            </div>
+        </div>
+
+        <div class="casa-card">
+            <h2>SIX Crespi</h2>
+            <div class="calendar-wrapper">
+                <iframe src="https://view.jcalendar.org/?ical=https://ical.booking.com/v1/export?t=ec4b8ba7-7635-49a0-b529-b5e0f27ef315"></iframe>
+            </div>
+        </div>
+
     </div>
 
-    <script>
-        const caseGPP = [
-            { id: 'cal-biri', url: 'https://ical.booking.com/v1/export?t=bac8b70b-7df6-4040-87b6-b57add00a01c' },
-            { id: 'cal-cris', url: 'https://ical.booking.com/v1/export?t=06f622a0-cd54-4209-892c-7fe2d4fbce71' },
-            { id: 'cal-max', url: 'https://ical.booking.com/v1/export?t=8c99a452-9708-43f2-b121-1955acd69dcf' },
-            { id: 'cal-marco', url: 'https://ical.booking.com/v1/export?t=c4dfaeec-ff71-4318-9ec6-de01b027b104' },
-            { id: 'cal-leo', url: 'https://ical.booking.com/v1/export?t=c7f826be-1635-47b0-abd5-af98d425d32f' },
-            { id: 'cal-asia', url: 'https://ical.booking.com/v1/export?t=fca09da7-61a5-4261-a156-024350220592' },
-            { id: 'cal-six', url: 'https://ical.booking.com/v1/export?t=ec4b8ba7-7635-49a0-b529-b5e0f27ef315' }
-        ];
+    <p class="disclaimer">Sincronizzazione automatica tramite iCal Booking.com</p>
 
-        document.addEventListener('DOMContentLoaded', function() {
-            caseGPP.forEach(casa => {
-                var calendarEl = document.getElementById(casa.id);
-                var calendar = new FullCalendar.Calendar(calendarEl, {
-                    initialView: 'dayGridMonth',
-                    locale: 'it',
-                    headerToolbar: { left: 'prev', center: 'title', right: 'next' },
-                    events: async function(info, successCallback, failureCallback) {
-                        try {
-                            const proxyUrl = 'https://api.allorigins.win/raw?url=';
-                            const response = await fetch(proxyUrl + encodeURIComponent(casa.url));
-                            const icsData = await response.text();
-                            const jcalData = ICAL.parse(icsData);
-                            const comp = new ICAL.Component(jcalData);
-                            const vevents = comp.getAllSubcomponents('vevent');
-                            
-                            const events = vevents.map(vevent => {
-                                const event = new ICAL.Event(vevent);
-                                return {
-                                    start: event.startDate.toJSDate(),
-                                    end: event.endDate.toJSDate(),
-                                    display: 'background',
-                                    className: 'occupied-event'
-                                };
-                            });
-                            successCallback(events);
-                        } catch (e) {
-                            console.error("Errore caricamento per " + casa.id, e);
-                            failureCallback(e);
-                        }
-                    }
-                });
-                calendar.render();
-            });
-        });
-    </script>
 </body>
 </html>
