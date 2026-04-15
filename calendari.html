@@ -5,28 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disponibilità Case | GPP Group</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; background: #ffffff; margin: 0; padding: 20px; color: #333; text-align: center; }
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background-color: #ffffff; 
+            color: #333; 
+            text-align: center; 
+            padding: 20px;
+        }
         .header { margin-bottom: 40px; }
-        .btn-back { display: inline-block; text-decoration: none; color: #bfa37e; font-weight: bold; margin-bottom: 20px; border: 2px solid #bfa37e; padding: 10px 20px; border-radius: 50px; }
+        .btn-back { 
+            display: inline-block; 
+            text-decoration: none; 
+            color: #bfa37e; 
+            font-weight: 800; 
+            margin-bottom: 20px; 
+            border: 2px solid #bfa37e; 
+            padding: 10px 25px; 
+            border-radius: 50px; 
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .btn-back:hover { background: #bfa37e; color: white; }
         
-        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1400px; margin: 0 auto; }
+        .grid-container { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 30px; 
+            max-width: 1400px; 
+            margin: 0 auto; 
+        }
         
-        .casa-card { background: white; border-radius: 18px; padding: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 6px solid #98d9ea; }
-        .casa-card h2 { font-size: 1.3rem; font-weight: 800; text-transform: uppercase; margin-bottom: 15px; }
+        .casa-card { 
+            background: white; 
+            border-radius: 18px; 
+            padding: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+            border-top: 6px solid #98d9ea; 
+        }
         
-        /* Contenitore per il calendario esterno */
-        .calendar-wrapper { width: 100%; height: 500px; overflow: hidden; border-radius: 10px; border: 1px solid #eee; }
+        .casa-card h2 { 
+            font-size: 1.3rem; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            margin-bottom: 15px; 
+            color: #1a1a1a;
+        }
+        
+        .calendar-wrapper { 
+            width: 100%; 
+            height: 450px; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            border: 1px solid #eee; 
+        }
+        
         iframe { width: 100%; height: 100%; border: none; }
-        
-        .disclaimer { font-size: 12px; color: #888; margin-top: 10px; }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <a href="index.html" class="btn-back">← TORNA ALLA HOME</a>
-        <h1 style="font-weight: 800;">DISPONIBILITÀ AGGIORNATE</h1>
-        <p>Le date occupate sono sincronizzate con Booking.com</p>
+        <a href="index.html" class="btn-back">← Torna alla Home</a>
+        <h1 style="font-weight: 800; text-transform: uppercase;">Disponibilità in tempo reale</h1>
+        <p>Calendari sincronizzati con Booking.com</p>
     </div>
 
     <div class="grid-container">
@@ -34,55 +76,53 @@
         <div class="casa-card">
             <h2>BIRI Trezzo</h2>
             <div class="calendar-wrapper">
-                <iframe src="https://view.jcalendar.org/?ical=https://ical.booking.com/v1/export?t=bac8b70b-7df6-4040-87b6-b57add00a01c"></iframe>
+                <iframe src="https://calendar.google.com/calendar/embed?src=pf58m93umt70jd9cp5pqo52fq402455r%40import.calendar.google.com&ctz=Europe%2FRome&mode=MONTH&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0"></iframe>
             </div>
         </div>
 
         <div class="casa-card">
             <h2>CRIS Trezzo</h2>
             <div class="calendar-wrapper">
-                <iframe src="https://view.jcalendar.org/?ical=https://ical.booking.com/v1/export?t=06f622a0-cd54-4209-892c-7fe2d4fbce71"></iframe>
+                <iframe src="https://calendar.google.com/calendar/embed?src=gjp947foai2tgniugoqrchumu0poe3ih%40import.calendar.google.com&ctz=Europe%2FRome&mode=MONTH&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0"></iframe>
             </div>
         </div>
 
         <div class="casa-card">
             <h2>MAX Concesa</h2>
             <div class="calendar-wrapper">
-                <iframe src="https://view.jcalendar.org/?ical=https://ical.booking.com/v1/export?t=8c99a452-9708-43f2-b121-1955acd69dcf"></iframe>
+                <iframe src="https://calendar.google.com/calendar/embed?src=dc05430hb1chco30si22sfkpk0ltkfcr%40import.calendar.google.com&ctz=Europe%2FRome&mode=MONTH&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0"></iframe>
             </div>
         </div>
 
         <div class="casa-card">
             <h2>MARCO Canonica</h2>
             <div class="calendar-wrapper">
-                <iframe src="https://view.jcalendar.org/?ical=https://ical.booking.com/v1/export?t=c4dfaeec-ff71-4318-9ec6-de01b027b104"></iframe>
+                <iframe src="https://calendar.google.com/calendar/embed?src=gtlvul44992fgvd5mi85q0vafgtlqgei%40import.calendar.google.com&ctz=Europe%2FRome&mode=MONTH&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0"></iframe>
             </div>
         </div>
 
         <div class="casa-card">
             <h2>LEO Capriate</h2>
             <div class="calendar-wrapper">
-                <iframe src="https://view.jcalendar.org/?ical=https://ical.booking.com/v1/export?t=c7f826be-1635-47b0-abd5-af98d425d32f"></iframe>
+                <iframe src="https://calendar.google.com/calendar/embed?src=qv9aqiu1dgj4q3h4mhnv2nr696bscb25%40import.calendar.google.com&ctz=Europe%2FRome&mode=MONTH&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0"></iframe>
             </div>
         </div>
 
         <div class="casa-card">
             <h2>ASIA Dalmine</h2>
             <div class="calendar-wrapper">
-                <iframe src="https://view.jcalendar.org/?ical=https://ical.booking.com/v1/export?t=fca09da7-61a5-4261-a156-024350220592"></iframe>
+                <iframe src="https://calendar.google.com/calendar/embed?src=6e0k3ufqiv0gsbn6n9cqlms6v1lmmbgd%40import.calendar.google.com&ctz=Europe%2FRome&mode=MONTH&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0"></iframe>
             </div>
         </div>
 
         <div class="casa-card">
             <h2>SIX Crespi</h2>
             <div class="calendar-wrapper">
-                <iframe src="https://view.jcalendar.org/?ical=https://ical.booking.com/v1/export?t=ec4b8ba7-7635-49a0-b529-b5e0f27ef315"></iframe>
+                <iframe src="https://calendar.google.com/calendar/embed?src=tngtub14vhjqmiletum7smi1uhnrv2p1%40import.calendar.google.com&ctz=Europe%2FRome&mode=MONTH&showTitle=0&showNav=1&showPrint=0&showTabs=0&showCalendars=0"></iframe>
             </div>
         </div>
-
+        
     </div>
-
-    <p class="disclaimer">Sincronizzazione automatica tramite iCal Booking.com</p>
 
 </body>
 </html>
