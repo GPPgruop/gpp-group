@@ -7,71 +7,72 @@
     <style>
         body { 
             margin: 0; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
             min-height: 100vh; 
             text-align: center; 
-            background-color: #f8f9fa; 
+            background-color: #ffffff; 
             padding: 20px; 
             box-sizing: border-box; 
         }
-        .container { max-width: 500px; width: 100%; background: white; padding: 40px 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .container { max-width: 500px; width: 100%; padding: 20px; }
         .main-logo { width: 180px; height: auto; margin-bottom: 30px; }
         
         .btn-group { display: flex; flex-direction: column; align-items: center; gap: 20px; margin-bottom: 40px; }
         
-        /* Bottoni Identici */
+        /* Stile Unificato dei Bottoni (Font Bold come da mockup) */
         .btn { 
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 100%;
-            max-width: 320px; 
-            height: 80px; /* Altezza fissa per farli uguali */
+            max-width: 350px; 
+            height: 90px; 
             text-decoration: none; 
-            border-radius: 12px; 
-            font-weight: bold; 
+            border-radius: 18px; 
+            font-weight: 800;    
             text-transform: uppercase; 
             transition: all 0.3s ease;
-            cursor: pointer;
         }
         
         .btn-gold { background: #bfa37e; color: white; }
-        .btn-green { background: #25D366; color: white; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2); }
         
-        .main-txt { font-size: 1.1rem; letter-spacing: 1px; }
-        .sub-txt { font-size: 0.75rem; opacity: 0.9; font-weight: normal; margin-top: 4px; }
-        
-        .btn:hover { transform: translateY(-3px); opacity: 0.9; box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
-
-        /* WhatsApp */
-        .wa-container { margin-bottom: 40px; }
-        .wa-icon-main { width: 24px; height: 24px; margin-bottom: 15px; }
-        .partners-row { display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; }
-        .wa-link { 
-            text-decoration: none; 
+        .btn-blue { 
+            background: #98d9ea; 
             color: #1a1a1a; 
-            font-size: 0.8rem; 
-            font-weight: bold; 
-            background: #f0f0f0;
-            padding: 8px 12px;
-            border-radius: 50px;
-            transition: 0.2s;
+            border: 2px solid #2ecc71; 
+            font-style: italic; 
         }
-        .wa-link:hover { background: #e2e2e2; }
+        
+        .btn-green { background: #2ecc71; color: white; }
+        
+        .main-txt { font-size: 1.2rem; letter-spacing: 1px; }
+        .sub-txt { font-size: 0.8rem; font-weight: 400; margin-top: 5px; }
+        
+        .btn:hover { transform: scale(1.02); opacity: 0.9; }
 
-        /* Pagamenti */
-        .payment-section { border-top: 1px solid #eee; padding-top: 30px; text-align: center; }
-        .payment-logos { display: flex; justify-content: center; align-items: center; gap: 25px; margin-bottom: 15px; }
-        .payment-logos img { height: 25px; width: auto; filter: grayscale(0.2); }
-        .secure-txt { display: block; text-align: center; font-size: 10px; color: #aaa; text-transform: uppercase; letter-spacing: 1.5px; }
+        /* Contatti WhatsApp con ICONA */
+        .wa-container { margin-bottom: 40px; }
+        .wa-icon-main { width: 30px; height: 30px; margin-bottom: 15px; }
+        .partners-row { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+        .wa-link { 
+            text-decoration: none; color: #1a1a1a; font-size: 0.85rem; font-weight: bold; 
+            background: #f0f0f0; padding: 10px 15px; border-radius: 50px; 
+        }
 
-        @media (max-width: 480px) { 
-            .partners-row { flex-direction: column; gap: 10px; } 
-            .btn { width: 95%; }
+        /* Footer Pagamenti (RIPRISTINATO) */
+        .payment-section { border-top: 1px solid #eee; padding-top: 30px; margin-top: 20px; text-align: center; }
+        .payment-logos { display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 15px; }
+        /* Assicurati che questi nomi di file siano corretti nella tua cartella */
+        .payment-logos img { height: 25px; width: auto; } 
+        .secure-txt { display: block; font-size: 10px; color: #aaa; text-transform: uppercase; letter-spacing: 1.5px; margin: 0; }
+
+        @media (max-width: 480px) {
+            .partners-row { flex-direction: column; gap: 10px; }
+            .wa-link { width: 100%; box-sizing: border-box; }
         }
     </style>
 </head>
@@ -82,6 +83,10 @@
         <div class="btn-group">
             <a href="entra.html" class="btn btn-gold">
                 <span class="main-txt">SCOPRI LE NOSTRE CASE</span>
+            </a>
+            
+            <a href="calendari.html" class="btn btn-blue">
+                <span class="main-txt">CALENDARI</span>
             </a>
             
             <a href="prenota.html" class="btn btn-green">
@@ -104,7 +109,7 @@
                 <img src="Immagine%202026-03-20%20085330.jpeg" alt="PayPal">
                 <img src="logo-satispay-rosso.png" alt="Satispay">
             </div>
-            <span class="secure-txt">🛡️ Pagamenti sicuri garantiti</span>
+            <p class="secure-txt">🛡️ Pagamenti sicuri garantiti</p>
         </div>
     </div>
 </body>
