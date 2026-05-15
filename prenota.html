@@ -29,6 +29,22 @@
     <p class="sub">Calcola il preventivo e invia la richiesta su WhatsApp.</p>
 
     <div class="section">
+        <div class="header">LUCA</div>
+        <div class="frm">
+            <div class="prices">1-2 Pers: <b>80€</b> | 3-5 Pers: <b>95€</b><br>Pulizie: 20€/30€ | +10€/g Animale</div>
+            <input type="text" id="n8" placeholder="Nome e Cognome">
+            <label>Ospiti:</label>
+            <select id="os8"><option value="1-2 persone">1-2 Persone</option><option value="3-5 persone">3-5 Persone</option></select>
+            <label>Check-in:</label><input type="date" id="cin8">
+            <label>Check-out:</label><input type="date" id="cout8">
+            <div class="pet-option"><input type="checkbox" id="pet8"> <span>Porto un animale (+10€/g)</span></div>
+            <label>Pagamento:</label>
+            <select id="p8"><option value="Bonifico Istantaneo">Bonifico Istantaneo</option><option value="Satispay">Satispay</option><option value="PayPal">PayPal</option></select>
+            <button class="btn-wa" onclick="inviaWA('LUCA', 'n8', 'os8', 'cin8', 'cout8', 'pet8', 'p8')">📱 Calcola e Invia Richiesta</button>
+        </div>
+    </div>
+
+    <div class="section">
         <div class="header">BIRI Trezzo</div>
         <div class="frm">
             <div class="prices">1-2 Pers: <b>80€</b> | 3-4 Pers: <b>100€</b><br>Pulizie: 20€/30€ | +10€/g Animale</div>
@@ -44,103 +60,7 @@
         </div>
     </div>
 
-    <div class="section">
-        <div class="header">MAX Concesa</div>
-        <div class="frm">
-            <div class="prices">1-2 Pers: <b>65€</b> | 3-4 Pers: <b>80€</b><br>Pulizie: 20€/30€ | +10€/g Animale</div>
-            <input type="text" id="n1" placeholder="Nome e Cognome">
-            <label>Ospiti:</label>
-            <select id="os1"><option value="1-2 persone">1-2 Persone</option><option value="3-4 persone">3-4 Persone</option></select>
-            <label>Check-in:</label><input type="date" id="cin1">
-            <label>Check-out:</label><input type="date" id="cout1">
-            <div class="pet-option"><input type="checkbox" id="pet1"> <span>Porto un animale (+10€/g)</span></div>
-            <label>Pagamento:</label>
-            <select id="p1"><option value="Bonifico Istantaneo">Bonifico Istantaneo</option><option value="Satispay">Satispay</option><option value="PayPal">PayPal</option></select>
-            <button class="btn-wa" onclick="inviaWA('MAX Concesa', 'n1', 'os1', 'cin1', 'cout1', 'pet1', 'p1')">📱 Calcola e Invia Richiesta</button>
-        </div>
     </div>
-
-    <div class="section">
-        <div class="header">LEO Capriate</div>
-        <div class="frm">
-            <div class="prices">1-2 Pers: <b>70€</b> | 3-4 Pers: <b>85€</b><br>Pulizie: 20€/30€ | +10€/g Animale</div>
-            <input type="text" id="n2" placeholder="Nome e Cognome">
-            <label>Ospiti:</label>
-            <select id="os2"><option value="1-2 persone">1-2 Persone</option><option value="3-4 persone">3-4 Persone</option></select>
-            <label>Check-in:</label><input type="date" id="cin2">
-            <label>Check-out:</label><input type="date" id="cout2">
-            <div class="pet-option"><input type="checkbox" id="pet2"> <span>Porto un animale (+10€/g)</span></div>
-            <label>Pagamento:</label>
-            <select id="p2"><option value="Bonifico Istantaneo">Bonifico Istantaneo</option><option value="Satispay">Satispay</option><option value="PayPal">PayPal</option></select>
-            <button class="btn-wa" onclick="inviaWA('LEO Capriate', 'n2', 'os2', 'cin2', 'cout2', 'pet2', 'p2')">📱 Calcola e Invia Richiesta</button>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="header">MARCO Canonica</div>
-        <div class="frm">
-            <div class="prices">1-2 Pers: <b>70€</b> | 3-4 Pers: <b>85€</b><br>Pulizie: 20€/30€ | +10€/g Animale</div>
-            <input type="text" id="n3" placeholder="Nome e Cognome">
-            <label>Ospiti:</label>
-            <select id="os3"><option value="1-2 persone">1-2 Persone</option><option value="3-4 persone">3-4 Persone</option></select>
-            <label>Check-in:</label><input type="date" id="cin3">
-            <label>Check-out:</label><input type="date" id="cout3">
-            <div class="pet-option"><input type="checkbox" id="pet3"> <span>Porto un animale (+10€/g)</span></div>
-            <label>Pagamento:</label>
-            <select id="p3"><option value="Bonifico Istantaneo">Bonifico Istantaneo</option><option value="Satispay">Satispay</option><option value="PayPal">PayPal</option></select>
-            <button class="btn-wa" onclick="inviaWA('MARCO Canonica', 'n3', 'os3', 'cin3', 'cout3', 'pet3', 'p3')">📱 Calcola e Invia Richiesta</button>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="header">CRIS Trezzo</div>
-        <div class="frm">
-            <div class="prices">1-3 Pers: <b>80€</b> | 4-6 Pers: <b>100€</b><br>Pulizie: 20€/30€ | +10€/g Animale</div>
-            <input type="text" id="n4" placeholder="Nome e Cognome">
-            <label>Ospiti:</label>
-            <select id="os4"><option value="1-3 persone">1-3 Persone</option><option value="4-6 persone">4-6 Persone</option></select>
-            <label>Check-in:</label><input type="date" id="cin4">
-            <label>Check-out:</label><input type="date" id="cout4">
-            <div class="pet-option"><input type="checkbox" id="pet4"> <span>Porto un animale (+10€/g)</span></div>
-            <label>Pagamento:</label>
-            <select id="p4"><option value="Bonifico Istantaneo">Bonifico Istantaneo</option><option value="Satispay">Satispay</option><option value="PayPal">PayPal</option></select>
-            <button class="btn-wa" onclick="inviaWA('CRIS Trezzo', 'n4', 'os4', 'cin4', 'cout4', 'pet4', 'p4')">📱 Calcola e Invia Richiesta</button>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="header">ASIA Dalmine</div>
-        <div class="frm">
-            <div class="prices">1-2 Pers: <b>80€</b> | 3-5 Pers: <b>95€</b><br>Pulizie: 20€/30€ | +10€/g Animale</div>
-            <input type="text" id="n5" placeholder="Nome e Cognome">
-            <label>Ospiti:</label>
-            <select id="os5"><option value="1-2 persone">1-2 Persone</option><option value="3-5 persone">3-5 Persone</option></select>
-            <label>Check-in:</label><input type="date" id="cin5">
-            <label>Check-out:</label><input type="date" id="cout5">
-            <div class="pet-option"><input type="checkbox" id="pet5"> <span>Porto un animale (+10€/g)</span></div>
-            <label>Pagamento:</label>
-            <select id="p5"><option value="Bonifico Istantaneo">Bonifico Istantaneo</option><option value="Satispay">Satispay</option><option value="PayPal">PayPal</option></select>
-            <button class="btn-wa" onclick="inviaWA('ASIA Dalmine', 'n5', 'os5', 'cin5', 'cout5', 'pet5', 'p5')">📱 Calcola e Invia Richiesta</button>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="header">SIX Crespi</div>
-        <div class="frm">
-            <div class="prices">1-3 Pers: <b>100€</b> | 4-6 Pers: <b>130€</b><br>Pulizie: 20€/30€ | +10€/g Animale</div>
-            <input type="text" id="n6" placeholder="Nome e Cognome">
-            <label>Ospiti:</label>
-            <select id="os6"><option value="1-3 persone">1-3 Persone</option><option value="4-6 persone">4-6 Persone</option></select>
-            <label>Check-in:</label><input type="date" id="cin6">
-            <label>Check-out:</label><input type="date" id="cout6">
-            <div class="pet-option"><input type="checkbox" id="pet6"> <span>Porto un animale (+10€/g)</span></div>
-            <label>Pagamento:</label>
-            <select id="p6"><option value="Bonifico Istantaneo">Bonifico Istantaneo</option><option value="Satispay">Satispay</option><option value="PayPal">PayPal</option></select>
-            <button class="btn-wa" onclick="inviaWA('SIX Crespi', 'n6', 'os6', 'cin6', 'cout6', 'pet6', 'p6')">📱 Calcola e Invia Richiesta</button>
-        </div>
-    </div>
-
-</div>
 
 <script>
 function inviaWA(casa, idNome, idOspiti, idCin, idCout, idPet, idPag) {
@@ -170,12 +90,12 @@ function inviaWA(casa, idNome, idOspiti, idCin, idCout, idPet, idPag) {
     let prezzoNotte = 0;
     let prezzoPulizie = (ospiti.includes('1-2') || ospiti.includes('1-3')) ? 20 : 30;
 
-    // Logica Prezzi
+    // Logica Prezzi aggiornata con LUCA
     if (casa === 'BIRI Trezzo') prezzoNotte = (ospiti.includes('1-2')) ? 80 : 100;
     else if (casa === 'MAX Concesa') prezzoNotte = (ospiti.includes('1-2')) ? 65 : 80;
     else if (casa === 'LEO Capriate' || casa === 'MARCO Canonica') prezzoNotte = (ospiti.includes('1-2')) ? 70 : 85;
     else if (casa === 'CRIS Trezzo') prezzoNotte = (ospiti.includes('1-3')) ? 80 : 100;
-    else if (casa === 'ASIA Dalmine') prezzoNotte = (ospiti.includes('1-2')) ? 80 : 95;
+    else if (casa === 'ASIA Dalmine' || casa === 'LUCA') prezzoNotte = (ospiti.includes('1-2')) ? 80 : 95;
     else if (casa === 'SIX Crespi') prezzoNotte = (ospiti.includes('1-3')) ? 100 : 130;
 
     let totaleSoggiorno = prezzoNotte * notti;
